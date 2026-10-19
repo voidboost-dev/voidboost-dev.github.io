@@ -1,0 +1,110 @@
+:root {
+  --bg: #f7f6f2;
+  --surface: #ffffff;
+  --text: #1d1c1a;
+  --muted: #5f5c55;
+  --line: #e4e1d9;
+  --accent: #2f6b4f;
+  --accent-soft: #e3efe8;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #151614;
+    --surface: #1e201d;
+    --text: #ecebe6;
+    --muted: #a6a39b;
+    --line: #2f312d;
+    --accent: #8fc9a8;
+    --accent-soft: #233229;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 16px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.page {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 24px 16px 64px;
+}
+
+header.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+.brand img { width: 40px; height: 40px; border-radius: 10px; }
+
+nav.langs { display: flex; gap: 4px; }
+nav.langs button {
+  font: inherit;
+  font-size: 14px;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--muted);
+  cursor: pointer;
+}
+nav.langs button[aria-pressed="true"] {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+  color: var(--text);
+}
+/* Without JS every language stays visible and the switcher is useless */
+html:not(.js) nav.langs { display: none; }
+html.js [data-lang]:not(.active) { display: none; }
+
+[data-lang] + [data-lang] { margin-top: 48px; }
+
+h1 { font-size: 28px; line-height: 1.25; margin: 0 0 8px; }
+h2 { font-size: 19px; margin: 32px 0 8px; }
+p, ul { margin: 0 0 12px; }
+ul { padding-left: 22px; }
+li { margin-bottom: 4px; }
+a { color: var(--accent); }
+
+.meta { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+
+.hero {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+.hero img { width: 72px; height: 72px; border-radius: 18px; margin-bottom: 12px; }
+
+.links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.links a {
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  text-decoration: none;
+  color: var(--text);
+}
+
+footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+
+h1, h2, p, li { overflow-wrap: anywhere; }
+code { overflow-wrap: anywhere; }
