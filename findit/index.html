@@ -1,82 +1,150 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Where did I put it?</title>
-  <meta name="description" content="Android app that remembers where your things are.">
-  <link rel="icon" href="icon.png">
-  <link rel="stylesheet" href="style.css">
-  <script src="lang.js"></script>
-</head>
-<body>
-<div class="page">
-  <header class="top">
-    <a class="brand" href="./"><img src="icon.png" alt=""><span>voidboost.dev</span></a>
-    <nav class="langs" aria-label="Language">
-      <button type="button" value="en">EN</button>
-      <button type="button" value="uk">UA</button>
-      <button type="button" value="ru">RU</button>
-    </nav>
-  </header>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Where did I put it?</title>
+        <meta
+            name="description"
+            content="Android app that remembers where your things are."
+        />
+        <meta name="theme-color" content="#f6f5f0" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#131412" media="(prefers-color-scheme: dark)" />
+        <link rel="canonical" href="https://voidboost.dev/findit/" />
+        <link rel="icon" href="icon.png" />
+        <link rel="apple-touch-icon" href="icon.png" />
+        <link rel="stylesheet" href="style.css" />
+        <script src="lang.js"></script>
+    </head>
+    <body>
+        <div class="page">
+            <header class="top">
+                <a class="brand" href="./" data-keep-lang><span>voidboost.dev</span></a>
+                <nav class="langs" aria-label="Language">
+                    <button type="button" value="en">EN</button>
+                    <button type="button" value="uk">UA</button>
+                    <button type="button" value="ru">RU</button>
+                </nav>
+            </header>
 
-  <main>
-    <section data-lang="en" lang="en">
-      <div class="hero">
-        <img src="icon.png" alt="App icon">
-        <h1>Where did I put it?</h1>
-        <p>An Android app that remembers where your things are. Add an item with a photo, note the place where you put it, and find it later with search.</p>
-        <ul>
-          <li>Everything is stored on your phone — no account required.</li>
-          <li>Backup to a file or to your own Google Drive.</li>
-          <li>Available in English, Ukrainian and Russian.</li>
-        </ul>
-        <div class="links">
-          <a href="privacy/#en">Privacy policy</a>
-          <a href="terms/#en">Terms of service</a>
-          <a href="mailto:voidboost.dev@gmail.com">Contact</a>
+            <main>
+                <section data-lang="en" lang="en" data-title="Where did I put it?">
+                    <div class="hero">
+                        <img class="app-icon" src="icon.png" alt="App icon" width="104" height="104" />
+                        <h1>Where did I put it?</h1>
+                        <p class="lead">An Android app that remembers where your things are.</p>
+                    </div>
+                    <ul class="features">
+                        <li>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><circle cx="12" cy="13" r="3"/><path d="M9.77778 21H14.2222C17.3433 21 18.9038 21 20.0248 20.2646C20.51 19.9462 20.9267 19.5371 21.251 19.0607C22 17.9601 22 16.4279 22 13.3636C22 10.2994 22 8.76721 21.251 7.6666C20.9267 7.19014 20.51 6.78104 20.0248 6.46268C19.3044 5.99013 18.4027 5.82123 17.022 5.76086C16.3631 5.76086 15.7959 5.27068 15.6667 4.63636C15.4728 3.68489 14.6219 3 13.6337 3H10.3663C9.37805 3 8.52715 3.68489 8.33333 4.63636C8.20412 5.27068 7.63685 5.76086 6.978 5.76086C5.59733 5.82123 4.69555 5.99013 3.97524 6.46268C3.48995 6.78104 3.07328 7.19014 2.74902 7.6666C2 8.76721 2 10.2994 2 13.3636C2 16.4279 2 17.9601 2.74902 19.0607C3.07328 19.5371 3.48995 19.9462 3.97524 20.2646C5.09624 21 6.65675 21 9.77778 21Z"/><path d="M19 10H18"/></g></svg>
+                            <b>Photo and place</b>
+                            <span>Add an item with a photo and note where you put it.</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><circle cx="11.5" cy="11.5" r="9.5"/><path d="M18.2173 18.2178L21.9999 22.0004"/></g></svg>
+                            <b>Quick search</b>
+                            <span>Find any item later by its name, note or place.</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M4 10C4 6.22876 4 4.34315 5.17157 3.17157C6.34315 2 8.22876 2 12 2C15.7712 2 17.6569 2 18.8284 3.17157C20 4.34315 20 6.22876 20 10V14C20 17.7712 20 19.6569 18.8284 20.8284C17.6569 22 15.7712 22 12 22C8.22876 22 6.34315 22 5.17157 20.8284C4 19.6569 4 17.7712 4 14V10Z"/><path d="M15 19H9"/></g></svg>
+                            <b>Stays on your phone</b>
+                            <span>Everything is stored on the device — no account required.</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M8.66667 11.2426C8.20528 10.9374 7.68059 10.7184 7.11616 10.6089C6.8475 10.5567 6.56983 10.5294 6.28571 10.5294C3.91878 10.5294 2 12.4256 2 14.7647C2 17.1038 3.91878 19 6.28571 19M14.381 8.02721C14.9767 7.81911 15.6178 7.70588 16.2857 7.70588C16.9404 7.70588 17.5693 7.81468 18.1551 8.01498M7.11616 10.6089C6.88706 9.9978 6.7619 9.33687 6.7619 8.64706C6.7619 5.52827 9.32028 3 12.4762 3C15.4159 3 17.8371 5.19371 18.1551 8.01498M18.1551 8.01498C20.393 8.78024 22 10.8811 22 13.3529C22 16.0599 20.0726 18.3221 17.5 18.8722"/><path stroke-linejoin="round" d="M12 16V22M10 18L12 16L14 18"/></g></svg>
+                            <b>Backup</b>
+                            <span>Save a copy to a file or to your own Google Drive.</span>
+                        </li>
+                    </ul>
+                    <p class="footnote">Available in English, Ukrainian and Russian.</p>
+                    <div class="links">
+                        <a href="privacy/#en" data-keep-lang>Privacy policy</a>
+                        <a href="terms/#en" data-keep-lang>Terms of service</a>
+                        <a href="mailto:voidboost.dev@gmail.com">Contact</a>
+                    </div>
+                </section>
+                <section data-lang="uk" lang="uk" data-title="Куди я це поклав?">
+                    <div class="hero">
+                        <img class="app-icon" src="icon.png" alt="Іконка застосунку" width="104" height="104" />
+                        <h1>Куди я це поклав?</h1>
+                        <p class="lead">Застосунок для Android, який пам'ятає, де лежать ваші речі.</p>
+                    </div>
+                    <ul class="features">
+                        <li>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><circle cx="12" cy="13" r="3"/><path d="M9.77778 21H14.2222C17.3433 21 18.9038 21 20.0248 20.2646C20.51 19.9462 20.9267 19.5371 21.251 19.0607C22 17.9601 22 16.4279 22 13.3636C22 10.2994 22 8.76721 21.251 7.6666C20.9267 7.19014 20.51 6.78104 20.0248 6.46268C19.3044 5.99013 18.4027 5.82123 17.022 5.76086C16.3631 5.76086 15.7959 5.27068 15.6667 4.63636C15.4728 3.68489 14.6219 3 13.6337 3H10.3663C9.37805 3 8.52715 3.68489 8.33333 4.63636C8.20412 5.27068 7.63685 5.76086 6.978 5.76086C5.59733 5.82123 4.69555 5.99013 3.97524 6.46268C3.48995 6.78104 3.07328 7.19014 2.74902 7.6666C2 8.76721 2 10.2994 2 13.3636C2 16.4279 2 17.9601 2.74902 19.0607C3.07328 19.5371 3.48995 19.9462 3.97524 20.2646C5.09624 21 6.65675 21 9.77778 21Z"/><path d="M19 10H18"/></g></svg>
+                            <b>Фото і місце</b>
+                            <span>Додайте річ із фото та вкажіть, куди ви її поклали.</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><circle cx="11.5" cy="11.5" r="9.5"/><path d="M18.2173 18.2178L21.9999 22.0004"/></g></svg>
+                            <b>Швидкий пошук</b>
+                            <span>Знайдіть будь-яку річ за назвою, нотаткою чи місцем.</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M4 10C4 6.22876 4 4.34315 5.17157 3.17157C6.34315 2 8.22876 2 12 2C15.7712 2 17.6569 2 18.8284 3.17157C20 4.34315 20 6.22876 20 10V14C20 17.7712 20 19.6569 18.8284 20.8284C17.6569 22 15.7712 22 12 22C8.22876 22 6.34315 22 5.17157 20.8284C4 19.6569 4 17.7712 4 14V10Z"/><path d="M15 19H9"/></g></svg>
+                            <b>Усе на телефоні</b>
+                            <span>Дані зберігаються на пристрої — обліковий запис не потрібен.</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M8.66667 11.2426C8.20528 10.9374 7.68059 10.7184 7.11616 10.6089C6.8475 10.5567 6.56983 10.5294 6.28571 10.5294C3.91878 10.5294 2 12.4256 2 14.7647C2 17.1038 3.91878 19 6.28571 19M14.381 8.02721C14.9767 7.81911 15.6178 7.70588 16.2857 7.70588C16.9404 7.70588 17.5693 7.81468 18.1551 8.01498M7.11616 10.6089C6.88706 9.9978 6.7619 9.33687 6.7619 8.64706C6.7619 5.52827 9.32028 3 12.4762 3C15.4159 3 17.8371 5.19371 18.1551 8.01498M18.1551 8.01498C20.393 8.78024 22 10.8811 22 13.3529C22 16.0599 20.0726 18.3221 17.5 18.8722"/><path stroke-linejoin="round" d="M12 16V22M10 18L12 16L14 18"/></g></svg>
+                            <b>Резервна копія</b>
+                            <span>Збережіть копію у файл або на ваш Google Диск.</span>
+                        </li>
+                    </ul>
+                    <p class="footnote">Українська, англійська та російська мови.</p>
+                    <div class="links">
+                        <a href="privacy/#uk" data-keep-lang>Політика конфіденційності</a>
+                        <a href="terms/#uk" data-keep-lang>Умови використання</a>
+                        <a href="mailto:voidboost.dev@gmail.com">Зв'язатися</a>
+                    </div>
+                </section>
+                <section data-lang="ru" lang="ru" data-title="Куда я это положил?">
+                    <div class="hero">
+                        <img class="app-icon" src="icon.png" alt="Иконка приложения" width="104" height="104" />
+                        <h1>Куда я это положил?</h1>
+                        <p class="lead">Приложение для Android, которое помнит, где лежат ваши вещи.</p>
+                    </div>
+                    <ul class="features">
+                        <li>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><circle cx="12" cy="13" r="3"/><path d="M9.77778 21H14.2222C17.3433 21 18.9038 21 20.0248 20.2646C20.51 19.9462 20.9267 19.5371 21.251 19.0607C22 17.9601 22 16.4279 22 13.3636C22 10.2994 22 8.76721 21.251 7.6666C20.9267 7.19014 20.51 6.78104 20.0248 6.46268C19.3044 5.99013 18.4027 5.82123 17.022 5.76086C16.3631 5.76086 15.7959 5.27068 15.6667 4.63636C15.4728 3.68489 14.6219 3 13.6337 3H10.3663C9.37805 3 8.52715 3.68489 8.33333 4.63636C8.20412 5.27068 7.63685 5.76086 6.978 5.76086C5.59733 5.82123 4.69555 5.99013 3.97524 6.46268C3.48995 6.78104 3.07328 7.19014 2.74902 7.6666C2 8.76721 2 10.2994 2 13.3636C2 16.4279 2 17.9601 2.74902 19.0607C3.07328 19.5371 3.48995 19.9462 3.97524 20.2646C5.09624 21 6.65675 21 9.77778 21Z"/><path d="M19 10H18"/></g></svg>
+                            <b>Фото и место</b>
+                            <span>Добавьте вещь с фото и укажите, куда вы её положили.</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><circle cx="11.5" cy="11.5" r="9.5"/><path d="M18.2173 18.2178L21.9999 22.0004"/></g></svg>
+                            <b>Быстрый поиск</b>
+                            <span>Найдите любую вещь по названию, заметке или месту.</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M4 10C4 6.22876 4 4.34315 5.17157 3.17157C6.34315 2 8.22876 2 12 2C15.7712 2 17.6569 2 18.8284 3.17157C20 4.34315 20 6.22876 20 10V14C20 17.7712 20 19.6569 18.8284 20.8284C17.6569 22 15.7712 22 12 22C8.22876 22 6.34315 22 5.17157 20.8284C4 19.6569 4 17.7712 4 14V10Z"/><path d="M15 19H9"/></g></svg>
+                            <b>Всё на телефоне</b>
+                            <span>Данные хранятся на устройстве — аккаунт не нужен.</span>
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"><path d="M8.66667 11.2426C8.20528 10.9374 7.68059 10.7184 7.11616 10.6089C6.8475 10.5567 6.56983 10.5294 6.28571 10.5294C3.91878 10.5294 2 12.4256 2 14.7647C2 17.1038 3.91878 19 6.28571 19M14.381 8.02721C14.9767 7.81911 15.6178 7.70588 16.2857 7.70588C16.9404 7.70588 17.5693 7.81468 18.1551 8.01498M7.11616 10.6089C6.88706 9.9978 6.7619 9.33687 6.7619 8.64706C6.7619 5.52827 9.32028 3 12.4762 3C15.4159 3 17.8371 5.19371 18.1551 8.01498M18.1551 8.01498C20.393 8.78024 22 10.8811 22 13.3529C22 16.0599 20.0726 18.3221 17.5 18.8722"/><path stroke-linejoin="round" d="M12 16V22M10 18L12 16L14 18"/></g></svg>
+                            <b>Резервная копия</b>
+                            <span>Сохраните копию в файл или на ваш Google Диск.</span>
+                        </li>
+                    </ul>
+                    <p class="footnote">Русский, украинский и английский языки.</p>
+                    <div class="links">
+                        <a href="privacy/#ru" data-keep-lang>Политика конфиденциальности</a>
+                        <a href="terms/#ru" data-keep-lang>Условия использования</a>
+                        <a href="mailto:voidboost.dev@gmail.com">Связаться</a>
+                    </div>
+                </section>
+            </main>
+
+            <footer>
+                © 2026 voidboost.dev
+                <small
+                    >Icons:
+                    <a href="https://solar-icons.dev/">Solar</a> by 480 Design,
+                    <a href="https://creativecommons.org/licenses/by/4.0/"
+                        >CC BY 4.0</a
+                    ></small
+                >
+            </footer>
         </div>
-      </div>
-    </section>
-
-    <section data-lang="uk" lang="uk">
-      <div class="hero">
-        <img src="icon.png" alt="Іконка застосунку">
-        <h1>Куди я це поклав?</h1>
-        <p>Застосунок для Android, який пам'ятає, де лежать ваші речі. Додайте річ із фото, вкажіть, куди ви її поклали, і знайдіть потім через пошук.</p>
-        <ul>
-          <li>Усе зберігається на телефоні — обліковий запис не потрібен.</li>
-          <li>Резервна копія у файл або на ваш Google Диск.</li>
-          <li>Українська, англійська та російська мови.</li>
-        </ul>
-        <div class="links">
-          <a href="privacy/#uk">Політика конфіденційності</a>
-          <a href="terms/#uk">Умови використання</a>
-          <a href="mailto:voidboost.dev@gmail.com">Зв'язатися</a>
-        </div>
-      </div>
-    </section>
-
-    <section data-lang="ru" lang="ru">
-      <div class="hero">
-        <img src="icon.png" alt="Иконка приложения">
-        <h1>Куда я это положил?</h1>
-        <p>Приложение для Android, которое помнит, где лежат ваши вещи. Добавьте вещь с фото, укажите, куда вы её положили, и найдите потом через поиск.</p>
-        <ul>
-          <li>Всё хранится на телефоне — аккаунт не нужен.</li>
-          <li>Резервная копия в файл или на ваш Google Диск.</li>
-          <li>Русский, украинский и английский языки.</li>
-        </ul>
-        <div class="links">
-          <a href="privacy/#ru">Политика конфиденциальности</a>
-          <a href="terms/#ru">Условия использования</a>
-          <a href="mailto:voidboost.dev@gmail.com">Связаться</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>© 2026 voidboost.dev</footer>
-</div>
-</body>
+    </body>
 </html>
